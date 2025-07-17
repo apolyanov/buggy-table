@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# 🎩 Buggy Data Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Описание
 
-Currently, two official plugins are available:
+Този проект е създаден с помощта на **React**, **TypeScript**, **Vite** и **Material UI**. Основната цел е да се заредят потребители от външен API и да се визуализират в табличен формат. Проектът използва и помощни функции, които са организирани в `utils.ts` файл.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Цел на проекта
 
-## Expanding the ESLint configuration
+Целта е да упражниш:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Работа с типове в TypeScript
+- Работа с компоненти и пропсове
+- Извичане на данни чрез HTTP заявка
+- Използване на `useState` и `useEffect`
+- Използване на Material UI компоненти (table, button, container и др.)
+- Работа с помощни функции (utils)
+- Структуриране на по-голям React компонент
+- Интеграция между различни файлове
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Използвани технологии
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Material UI](https://mui.com/)
+- [Axios](https://axios-http.com/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Старт на проекта
+
+```bash
+# 1. Инсталирай зависимостите
+npm install
+
+# 2. Стартирай проекта локално
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+След това отвори браузъра си на [http://localhost:5173](http://localhost:5173)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Структура на проекта
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   └── UserTable.tsx
+├── utils/
+│   └── utils.ts
+├── App.tsx
+└── main.tsx
+```
+
+## 🌐 Използван API
+
+Данните се взимат от публичен API:
+[https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
+
+## 🧠 Какво да очакваш
+
+Проектът е функционален, но има какво да се подобри:
+
+- Някои функции може да не работят както се очаква
+- Типите не са строго дефинирани — твоя задача е да ги подобриш
+- Някои части от логиката могат да бъдат оптимизирани
+- Интерфейсът може да се подобри (визуално, UX и др.)
+- Има място за добавяне на функции като търсачка, сортиране и странициране
+
+---
+
+Успех и приятно разгадаване! 🚀
